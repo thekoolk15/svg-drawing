@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive SVG Drawing Canvas - Draw freely with your mouse">
+    <title>SVG Drawing Canvas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>SVG Drawing Canvas</h1>
+            <p class="subtitle">Click and drag to draw • Release to stop</p>
+        </header>
+        
+        <div class="canvas-wrapper">
+            <svg id="drawingCanvas" class="drawing-canvas">
+                <!-- Polylines will be added here dynamically -->
+            </svg>
+        </div>
+        
+        <div class="controls">
+            <button id="clearBtn" class="btn btn-clear">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m3 0v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6h14z"/>
+                </svg>
+                Clear Canvas
+            </button>
+            <div class="color-picker-wrapper">
+                <label for="colorPicker" class="color-label">Brush Color:</label>
+                <input type="color" id="colorPicker" class="color-picker" value="#00d4ff">
+            </div>
+            <div class="stroke-wrapper">
+                <label for="strokeWidth" class="stroke-label">Brush Size:</label>
+                <input type="range" id="strokeWidth" class="stroke-slider" min="1" max="20" value="3">
+                <span id="strokeValue" class="stroke-value">3px</span>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>Draw beautiful art with SVG polylines</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
